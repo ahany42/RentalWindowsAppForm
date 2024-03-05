@@ -1,0 +1,7 @@
+create or replace procedure GetRentID (RID out number)
+as
+begin
+select max(rentid)
+into RID
+from rentals;
+end;

@@ -1,0 +1,10 @@
+create or replace procedure GetCopyID
+(FTitle in varchar2 , CID out sys_refcursor)
+as
+begin
+open CID for
+select fc.CopyID
+from FilmCopies fc , FilmTitles F
+where fc.FilmID = F.FilmID and fc.CurrentlyRented = 'n' and
+F.FilmTitle = Ftitle ;
+end;

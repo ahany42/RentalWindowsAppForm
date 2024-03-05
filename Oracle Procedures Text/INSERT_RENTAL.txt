@@ -1,0 +1,9 @@
+create or replace procedure Insert_Rental
+(RID number, MID Number,CID Number,
+DRented Date, DBack Date, Cost Number)
+as
+begin
+insert into Rentals
+(RentID, MemberID,CopyID, DateRented, DateDueBack, RentalCost)
+Values ( RID, MID, CID, DRented, DBack, Cost) ;
+End ;
